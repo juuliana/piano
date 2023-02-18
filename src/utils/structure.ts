@@ -7,20 +7,7 @@ interface Structure {
   sound: string;
 }
 
-export const structure: Structure[] = [
-  //notes
-  {
-    code: "A",
-    name: "lá",
-    key: "h",
-    sound: "/sounds/A.mp3",
-  },
-  {
-    code: "B",
-    name: "sí",
-    key: "j",
-    sound: "/sounds/B.mp3",
-  },
+export const notesStructure: Structure[] = [
   {
     code: "C",
     name: "dó",
@@ -51,8 +38,21 @@ export const structure: Structure[] = [
     key: "g",
     sound: "/sounds/G.mp3",
   },
+  {
+    code: "A",
+    name: "lá",
+    key: "h",
+    sound: "/sounds/A.mp3",
+  },
+  {
+    code: "B",
+    name: "sí",
+    key: "j",
+    sound: "/sounds/B.mp3",
+  },
+];
 
-  //sharp notes
+export const sharpNotesStructure: Structure[] = [
   {
     code: "C#",
     name: "dó#",
@@ -83,4 +83,9 @@ export const structure: Structure[] = [
     key: "u",
     sound: "/sounds/ASharp.mp3",
   },
+];
+
+export const structure: Structure[] = [
+  ...notesStructure,
+  ...sharpNotesStructure,
 ];
