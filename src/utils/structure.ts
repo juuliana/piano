@@ -65,6 +65,7 @@ export const sharpNotesStructure: Structure[] = [
     key: "e",
     sound: "/sounds/DSharp.mp3",
   },
+  {} as any,
   {
     code: "F#",
     name: "fá#",
