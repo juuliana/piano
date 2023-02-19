@@ -1,11 +1,18 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   background: #ffffff;
-  height: 220px;
-  width: 80px;
+  height: 150px;
+  width: 50px;
   border-radius: 5px;
   margin-bottom: 5px;
+  padding-bottom: 10px;
+
+  font-size: 20px;
+  color: #19191980;
 
   ${({ selected }: { selected: boolean }) => {
     if (selected) {
