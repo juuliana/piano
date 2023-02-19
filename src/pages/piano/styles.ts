@@ -7,6 +7,12 @@ export const Container = styled.div`
   border-radius: 10px;
   background: #191919;
   padding-bottom: 10px;
+
+  @media (max-width: 500px) {
+    transform: rotate(90deg);
+    margin-top: 80vh;
+    margin-left: 50vh;
+  }
 `;
 
 export const Configuration = styled.div`
@@ -36,5 +42,5 @@ export const SecondContent = styled.div`
   flex-direction: row;
   gap: 25px;
   background: transparent;
-  margin: 125px 52px;
+  margin: 124px 52px;
 `;

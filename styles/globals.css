@@ -7,6 +7,7 @@
 html,
 body {
   display: flex;
+  -webkit-tap-highlight-color: transparent;
   height: 100vh;
   overflow-x: hidden;
   justify-content: center;
