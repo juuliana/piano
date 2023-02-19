@@ -1,19 +1,9 @@
 import { useSound } from "@/src/hooks";
-import { Codes, IStructure } from "@/src/utils";
-
-import { IToggle } from "../toggle/types";
 
 import { Container } from "./styles";
+import { IKeyProps } from "./types";
 
-export namespace KeyProps {
-  export interface Props {
-    note: IStructure;
-    typed: Codes | string;
-    labelOption: IToggle.Selected;
-  }
-}
-
-export function Key({ note, typed, labelOption }: KeyProps.Props) {
+export function Key({ note, typed, labelOption }: IKeyProps.Props) {
   const { play } = useSound();
 
   const label = labelOption === "hidden" ? "" : note[labelOption];
