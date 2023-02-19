@@ -1,24 +1,24 @@
-import { notesStructure, sharpNotesStructure } from "@/src/utils";
+import { useKeydown } from "@/src/hooks";
 import { Key, MajorKey } from "@/src/components";
+import { notesStructure, sharpNotesStructure } from "@/src/utils";
 
 import { Container, FirstContent, SecondContent } from "./styles";
 
 export function Piano() {
+  const { typed } = useKeydown();
+
   return (
     <Container>
       <FirstContent>
         {notesStructure.map(({ code }) => (
-          <Key key={code} note={code} />
+          <Key key={code} note={code} typed={typed} />
         ))}
       </FirstContent>
 
       <SecondContent>
-        <MajorKey note="C#" />
-        <MajorKey note="D#" />
-        <MajorKey empty />
-        <MajorKey note="F#" />
-        <MajorKey note="G#" />
-        <MajorKey note="A#" />
+        {sharpNotesStructure.map(({ code }) => (
+          <MajorKey empty={!code} key={code} note={code} typed={typed} />
+        ))}
       </SecondContent>
     </Container>
   );
