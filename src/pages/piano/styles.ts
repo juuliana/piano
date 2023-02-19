@@ -5,7 +5,7 @@ export const Container = styled.div`
   cursor: pointer;
   position: relative;
   border-radius: 10px;
-  background: #191919;
+  background: var(--background);
   padding-bottom: 10px;
 
   @media (max-width: 500px) {
