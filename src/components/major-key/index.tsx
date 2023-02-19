@@ -8,6 +8,7 @@ export function MajorKey({ empty, note, typed, labelOption }: IMajorKey.Props) {
 
   const { code = "" } = note || {};
   const label = labelOption === "hidden" ? "" : note && note[labelOption];
+  const parsedLabel = label === "Backspace" ? "Bksp" : label;
 
   return (
     <Container
@@ -15,7 +16,7 @@ export function MajorKey({ empty, note, typed, labelOption }: IMajorKey.Props) {
       onClick={() => play(code)}
       selected={typed === code}
     >
-      {label}
+      {parsedLabel}
     </Container>
   );
 }

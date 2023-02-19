@@ -7,10 +7,11 @@ export function Key({ note, typed, labelOption }: IKeyProps.Props) {
   const { play } = useSound();
 
   const label = labelOption === "hidden" ? "" : note[labelOption];
+  const parsedLabel = label === "Dead" ? "´" : label;
 
   return (
     <Container onClick={() => play(note.code)} selected={typed === note.code}>
-      {label}
+      {parsedLabel}
     </Container>
   );
 }
