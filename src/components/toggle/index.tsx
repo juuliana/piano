@@ -19,7 +19,6 @@ export function Toggle({ onSelect }: IToggle.Props) {
       <Option>
         <input
           type="radio"
-          value="hidden"
           defaultChecked={selected === "hidden"}
           onClick={() => change("hidden")}
         />
@@ -29,7 +28,6 @@ export function Toggle({ onSelect }: IToggle.Props) {
       <Option>
         <input
           type="radio"
-          value="key"
           defaultChecked={selected === "key"}
           onClick={() => change("key")}
         />
@@ -39,7 +37,6 @@ export function Toggle({ onSelect }: IToggle.Props) {
       <Option>
         <input
           type="radio"
-          value="name"
           defaultChecked={selected === "name"}
           onClick={() => change("name")}
         />
@@ -49,7 +46,6 @@ export function Toggle({ onSelect }: IToggle.Props) {
       <Option>
         <input
           type="radio"
-          value="code"
           defaultChecked={selected === "code"}
           onClick={() => change("code")}
         />

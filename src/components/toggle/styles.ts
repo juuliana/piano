@@ -9,7 +9,7 @@ export const Container = styled.div<IToggle.Option>`
 
   border: none;
   background: #fff;
-  box-shadow: 0 0 6px rgba(72, 72, 72, 0.15);
+  box-shadow: var(--shadow-toggle);
 
   height: 40px;
   width: 160px;
@@ -51,7 +51,7 @@ export const Container = styled.div<IToggle.Option>`
       if (selected) {
         return css`
           background: #fff;
-          box-shadow: 0 0 6px rgba(72, 72, 72);
+          box-shadow: var(--shadow-toggle-selected);
         `;
       }
     }}
