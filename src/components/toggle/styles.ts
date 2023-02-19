@@ -13,11 +13,11 @@ export const Container = styled.div<IToggle.Option>`
 
   height: 40px;
   width: 160px;
-  gap: 12px;
+  gap: 10px;
   border-radius: 10px;
 
-  > label:first-child {
-    margin-right: -${5 / 16}rem;
+  @media (max-width: 500px) {
+    gap: 5px;
   }
 
   &::before {

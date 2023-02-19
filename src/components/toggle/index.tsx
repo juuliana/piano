@@ -33,7 +33,7 @@ export function Toggle({ onSelect }: IToggle.Props) {
           defaultChecked={selected === "key"}
           onClick={() => change("key")}
         />
-        <MdKeyboardHide style={{ marginLeft: 2.5 }} />
+        <MdKeyboardHide />
       </Option>
 
       <Option>
