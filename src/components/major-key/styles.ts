@@ -5,13 +5,17 @@ export const Container = styled.div`
   justify-content: center;
   align-items: flex-end;
 
-  background: #191919;
   width: 35px;
   height: 75px;
   padding-bottom: 10px;
 
   font-size: 16px;
-  color: #ffffff80;
+  color: var(--white-opacity-80);
+
+  background: linear-gradient(20deg, var(--gray), var(--black));
+  border-width: 0px 3px 8px 3px;
+  border-style: solid;
+  border-color: var(--black) var(--gray);
 
   ${({ selected, empty }: { selected: boolean; empty?: boolean }) => {
     if (empty) {
@@ -20,12 +24,12 @@ export const Container = styled.div`
       `;
     } else if (selected) {
       return css`
-        box-shadow: inset 5px 2px 10px #ffffff;
+        box-shadow: var(--shadow-selected-2);
       `;
     } else {
       return css`
         :active {
-          box-shadow: inset 5px 2px 10px #ffffff;
+          box-shadow: var(--shadow-selected-2);
         }
       `;
     }
