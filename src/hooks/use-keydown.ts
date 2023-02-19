@@ -1,31 +1,27 @@
 import { useEffect, useState } from "react";
 
 import { Codes, structure } from "../utils";
+
 import { useSound } from "./use-sound";
 
 export function useKeydown() {
-  const [typed, setTyped] = useState<Codes | string>("a");
+  const [typed, setTyped] = useState<Codes | string>("");
 
   const { play } = useSound();
 
   useEffect(() => {
-    if (document)
-      document.body.addEventListener("keydown", eventFunction, false);
+    if (document) document.addEventListener("keydown", eventFunction, false);
   }, []);
 
   function eventFunction(event: KeyboardEvent) {
-    const word = event.key;
+    const note = structure.find(({ key }) => key === event.key);
 
-    const transformed = structure.filter(({ key }) => key === word)[0];
+    if (!note) return;
 
-    if (transformed) {
-      setTyped(transformed.code);
-      play(transformed.code);
+    setTyped(note.code);
+    play(note.code);
 
-      setTimeout(() => {
-        setTyped("");
-      }, 300);
-    }
+    setTimeout(() => setTyped(""), 300);
   }
 
   return { typed };
