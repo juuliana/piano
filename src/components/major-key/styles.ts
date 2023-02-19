@@ -9,7 +9,7 @@ export const Container = styled.div`
   height: 75px;
   padding-bottom: 10px;
 
-  font-size: 16px;
+  font-size: 14px;
   color: var(--white-opacity-80);
 
   background: linear-gradient(20deg, var(--gray), var(--black));
